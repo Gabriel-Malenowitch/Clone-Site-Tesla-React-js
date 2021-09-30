@@ -1,0 +1,71 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sectionCar{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 70%;    
+    display: block; 
+}
+.sectionCar--title{
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    font-weight: 500;
+    padding-top: 80px;
+    font-size: 2.5rem;
+    z-index: 9;
+}
+.sectionCar--description{
+    position: fixed;
+    margin-top: 135px;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.sectionCar--button{
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-evenly;
+}
+.sectionCar--divR{
+    margin-bottom: 20px;
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sectionCar--BL, .sectionCar--BR{
+    margin: 0px 13px;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: transparent;
+    display: inline;
+}
+.sectionCar--BL{
+    background-color: rgba(34, 34, 34, 0.596);   
+    color: white;
+}
+.sectionCar--BR{
+    background-color: rgba(255, 255, 255, 0.726);
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .sectionCar--BL, .sectionCar--BR{
+        width: 150px;
+    }
+}

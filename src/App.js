@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import HeaderMainWide from './components/header/wide/HeaderMain';
+import HeaderMainProfile from './components/header/profile/HeaderMain';
+import SectionCars from './components/sectionCars/SectionCars';
+import {DATA} from './assets/API'
 import './App.css';
+
+export const relativeScreen = 1140
+export const nCars = 4
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header id="header">
+        {window.innerWidth >= relativeScreen ? <HeaderMainWide/> : <HeaderMainProfile/>}
       </header>
-    </div>
+      <main>
+        {DATA.map((item, key)=>{
+          return <SectionCars color="white" id={String(key)} key={key} item={item} />
+        })}
+        
+      </main>
+    </>
   );
 }
 
